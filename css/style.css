@@ -1,0 +1,136 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f9;
+  color: #333;
+  padding-top: 60px;
+}
+
+/* Encabezado */
+header {
+  background: #004d99;
+  color: #fff;
+  padding: 20px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+/* Secciones */
+main {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 40px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  margin-bottom: 15px;
+  color: #004d99;
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  background: #004d99;
+  color: #fff;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* ===== Carrusel ===== */
+.carrusel {
+  position: relative;
+  max-width: 700px;   /* ancho máximo */
+  width: 100%;        /* ocupa todo el ancho disponible */
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.carrusel-contenedor {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-item {
+  min-width: 100%;       /* cada slide ocupa todo el ancho */
+  height: auto;          /* se ajusta a la imagen */
+  box-sizing: border-box;
+}
+
+.carrusel img {
+  width: 100%;           /* ocupa todo el contenedor */
+  height: auto;          /* mantiene proporción */
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;     /* ajusta la imagen si no encaja */
+}
+
+/* Botones */
+.carrusel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  padding: 14px 18px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 20px;
+  z-index: 2;
+}
+
+.carrusel-btn.prev {
+  left: 15px;
+}
+
+.carrusel-btn.next {
+  right: 15px;
+}
+
+.carrusel-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+
